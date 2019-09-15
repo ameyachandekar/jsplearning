@@ -1,5 +1,6 @@
 package database;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -27,9 +28,10 @@ public class Servlet extends HttpServlet{
 			HttpSession session = req.getSession();
 			session.setAttribute("user", username);
 			resp.sendRedirect("/jsp/user_section.jsp");
-			//req.getRequestDispatcher("/user_section.jsp").forward(req,resp);
+		    //req.getRequestDispatcher("/user_section.jsp").forward(req,resp);
 			
-		}else {
+		}
+		else {
 			writer.print("Invalid credentials");
 		}
 		
